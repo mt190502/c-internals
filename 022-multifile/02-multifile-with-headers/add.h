@@ -3,6 +3,6 @@
 
 #include <stddef.h>
 
-int add(size_t argc, int argv[]);
+int add(int, int[]);
 
 #endif

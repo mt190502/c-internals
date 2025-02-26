@@ -3,8 +3,13 @@
 #include <string.h>
 
 int main(int argc, char* argv[]) {
-    strcpy(argv[0], "023-outside-env-but-argv0-is-modified");
-
+    char* duplicated = strdup("023-outside-env-but-argv0-is-modified");
+    if (duplicated == NULL) {
+        printf("Memory allocation failed\n");
+        return EXIT_FAILURE;
+    }
+    argv[0] = duplicated;
+    
     if (argv[1] == NULL) {
         printf("argument is not provided\n");
         return EXIT_FAILURE;

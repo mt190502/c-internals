@@ -6,7 +6,7 @@ int main(void) {
     // char: 1 byte (-128 to 127)
     char c = 'A';
 
-    // bool: 1 byte (0 to 1)
+    // bool: 1 byte (0 to 1) <stdbool.h>
     bool b = true;
 
     // int: 4 bytes (-2,147,483,648 to 2,147,483,647)
@@ -18,7 +18,7 @@ int main(void) {
     // double: 8 bytes (2.3E-308 to 1.7E+308)
     double z = 3.0;
 
-    // char* (pointer): 8 bytes (64-bit system)
+    // char* (string literal pointer): 8 bytes (64-bit system)
     char* s = "Hello, World!";
 
     printf("c (%2ld bytes): %c\n", sizeof(c), c);
@@ -26,10 +26,12 @@ int main(void) {
     printf("x (%2ld bytes): %d\n", sizeof(x), x);
     printf("y (%2ld bytes): %f\n", sizeof(y), y);
     printf("z (%2ld bytes): %f\n", sizeof(z), z);
-    printf("s (%2ld bytes): %s\n", strlen(s), s);
+    printf("s (%2ld bytes): %s\n", strlen(s), s);  // strlen() from <string.h>
 
     printf("========================================\n");
 
+    printf("%7s | %11s | %5s | %8s\n", "Decimal", "Hexadecimal", "Octal", "Integer");
+    printf("--------|-------------|-------|---------\n");
     for (int i = 0; i < 20; i++) {
         printf("%1$7i | %1$##11x | %1$##5o | %1$8d\n", i);
     }

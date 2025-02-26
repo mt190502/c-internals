@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int strlen_cst(const char* str) {
+int strlen_cst(char* str) {
     int i = 0;
     while (str[i] != '\0') {
         i++;

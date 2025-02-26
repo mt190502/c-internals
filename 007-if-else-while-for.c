@@ -3,7 +3,7 @@
 int main(void) {
     int a = 10, b = 20, c = 30;
 
-    if (a < b && b < c) {
+    if ((a < b) && (b < c)) {
         printf("a is less than b and b is less than c\n");
     } else {
         printf("a is not less than b and b is not less than c\n");
@@ -27,7 +27,7 @@ int main(void) {
     do {
         printf("a: %d\n", a);
         a--;
-    } while (0 < a && a < b);
+    } while ((0 < a) && (a < b));
 
     printf("====================================\n");
 

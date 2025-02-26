@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 struct employee {
     char name[50];
@@ -6,21 +7,24 @@ struct employee {
     float salary;
 };
 
-
-void display_employee(struct employee *em) {
-    printf("=== Employee ===\nName: %s\nAge: %d\nSalary: %.2f\n", em->name, em->age, em->salary);
-}
+void display_employee(struct employee* em) { printf("=== Employee ===\nName: %s\nAge: %d\nSalary: %.2f\n", em->name, em->age, em->salary); }
 
 int main(void) {
-    struct employee employee;
-    printf("Enter name: ");
-    scanf("%s", employee.name);
-    printf("Enter age: ");
-    scanf("%d", &employee.age);
-    printf("Enter salary: ");
-    scanf("%f", &employee.salary);
+    struct employee em1;
 
-    display_employee(&employee);
+    printf("Enter name: ");
+    char buffer[50];
+    fgets(buffer, sizeof(buffer), stdin);
+    buffer[strcspn(buffer, "\n")] = '\0';
+    strcpy(em1.name, buffer);
+    
+    printf("Enter age: ");
+    scanf("%d", &em1.age);
+    
+    printf("Enter salary: ");
+    scanf("%f", &em1.salary);
+
+    display_employee(&em1);
 
     printf("====================================\n");
 

@@ -1,6 +1,6 @@
-#include <stdio.h>
 #include "add.h"
 #include "minus.h"
+#include <stdio.h>
 
 // Compile after creating the object files (add.o and minus.o)
 // gcc -o main main.c add.o minus.o

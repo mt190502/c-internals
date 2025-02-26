@@ -26,8 +26,8 @@ int main(void) {
 
     do {
         printf("a: %d\n", a);
-        a++;
-    } while (a < b);
+        a--;
+    } while (0 < a && a < b);
 
     printf("====================================\n");
 
@@ -44,6 +44,6 @@ int main(void) {
     for (;;) {
         printf("Hello\n");
     }
-    
+
     return 0;
 }

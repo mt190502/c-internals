@@ -20,29 +20,17 @@ struct spaceship {
 };
 
 int main() {
-    struct spaceship my_ship = {
-        .manufacturer = "NASA",
-        .cabin_inf = {
-            .num_windows = 4,
-            .o2_level = 21
-        }
-    };
-    
+    struct spaceship my_ship = {.manufacturer = "NASA", .cabin_inf = {.num_windows = 4, .o2_level = 21}};
+
     printf("Manufacturer: %s\n", my_ship.manufacturer);
     printf("Number of windows: %d\n", my_ship.cabin_inf.num_windows);
     printf("O2 level: %d\n", my_ship.cabin_inf.o2_level);
 
     printf("=====================================\n");
 
-    struct passenger p1 = {
-        .name = "Alice",
-        .age = 25
-    };
+    struct passenger p1 = {.name = "Alice", .age = 25};
 
-    struct passenger p2 = {
-        .name = "Bob",
-        .age = 30
-    };
+    struct passenger p2 = {.name = "Bob", .age = 30};
 
     my_ship.passenger[0] = p1;
     my_ship.passenger[1] = p2;
@@ -76,7 +64,7 @@ int main() {
         int data;
         struct node* next;
     };
-    
+
     struct node* head;
 
     head = malloc(sizeof(struct node));
@@ -85,10 +73,10 @@ int main() {
     head->next->data = 22;
     head->next->next = malloc(sizeof(struct node));
     head->next->next->data = 33;
-    
+
     for (struct node* current = head; current != NULL; current = current->next) {
         printf("%d\n", current->data);
-    }    
+    }
 
     return 0;
 }

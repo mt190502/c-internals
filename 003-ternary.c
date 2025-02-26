@@ -12,7 +12,7 @@ int main(void) {
     int d = a < b ? a : b;
     printf("d = %d\n", d);
 
-    printf("The number %d is %s.\n", a , a % 2 == 0 ? "even" : "odd");
+    printf("The number %d is %s.\n", a, a % 2 == 0 ? "even" : "odd");
 
     return 0;
 }

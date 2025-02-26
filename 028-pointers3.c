@@ -1,9 +1,7 @@
-#include <stdio.h>
 #include <stdint.h>
+#include <stdio.h>
 
-void sqrt_cst(int a) {
-    printf("sqrt_cst: %d\n", a * a);
-}
+void sqrt_cst(int a) { printf("sqrt_cst: %d\n", a * a); }
 
 int main(void) {
     int t = 10;
@@ -25,8 +23,8 @@ int main(void) {
 
     int a = 10;
     int* const p = &a;
-    int* const *q = &p;
-    int* const **r = &q;
+    int* const* q = &p;
+    int* const** r = &q;
     printf("a: %d\n", a);
     printf("p: %p(a) -> %d\n", p, *p);
     printf("q: %p(p) -> %p(a) -> %d\n", q, *q, **q);

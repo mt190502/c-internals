@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int add_all_elements(int argc, int* arr) {
-     int sum = 0;
+    int sum = 0;
 
     for (int i = 0; i < argc; i++) {
         sum += arr[i];
@@ -13,16 +13,15 @@ int main(void) {
     int i;
     float f[5] = {1.0, 2.0, 3.0, 4.0, 5.0};
 
-    for (i = 0; i < 4; i++) {
+    for (i = 0; i < 5; i++) {
         printf("f[%d] = %f\n", i, f[i]);
     }
 
-    printf("%lu bytes: %lu elements\n", sizeof(f), sizeof(f) / sizeof(f[0]));
+    printf("%lu bytes: %lu elements\n", sizeof(f), sizeof(f) / sizeof(float));
 
     printf("====================================\n");
 
-    int arr[2][3][4] = {{{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}},
-                        {{13, 14, 15, 16}, {17, 18, 19, 20}, {21, 22, 23, 24}}};
+    int arr[2][3][4] = {{{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}}, {{13, 14, 15, 16}, {17, 18, 19, 20}, {21, 22, 23, 24}}};
 
     size_t x = sizeof(arr) / sizeof(arr[0]);
     size_t y = sizeof(arr[0]) / sizeof(arr[0][0]);
@@ -40,8 +39,8 @@ int main(void) {
 
     printf("====================================\n");
 
-    int arr2[5] = {12, 2, 3, 4, 5};
-    int *p = arr2;
+    int arr2[] = {12, 2, 3};
+    int* p = arr2;
 
     printf("%i\n", p[0]);
     printf("%i\n", *(p + 0));

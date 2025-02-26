@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include "add.h"
+#include <stdio.h>
 
 // Compile this flags
 // gcc -o main main.c add.c

@@ -1,8 +1,9 @@
 #include <stdio.h>
 
 int main(void) {
-    FILE *file;
-    file = fopen("999-attachment.txt", "r+"); // a - append, w - write, r - read, r+ - read and write
+    FILE* file;
+    file = fopen("999-attachment.txt",
+                 "r+");  // a - append, w - write, r - read, r+ - read and write
 
     printf("====================================\n");
 
@@ -12,18 +13,19 @@ int main(void) {
     printf("====================================\n");
 
     int lines = 1;
-    while (first_char != EOF) {
-        if (first_char == '\n') {
+    int next_char = fgetc(file);
+    while (next_char != EOF) {
+        if (next_char == '\n') {
             lines++;
         }
-        printf("%c", first_char);
-        first_char = fgetc(file);
+        printf("%c", next_char);
+        next_char = fgetc(file);
     }
     printf("Lines: %d\n", lines);
     fclose(file);
 
     printf("====================================\n");
-    FILE *file2 = fopen("999-employees.txt", "r+");
+    FILE* file2 = fopen("999-employees.txt", "r+");
     char name[10], job[10];
     int age;
     float salary;
@@ -33,14 +35,14 @@ int main(void) {
     fclose(file2);
 
     printf("====================================\n");
-    
-    FILE *file3 = fopen("temp.txt", "w+");
+
+    FILE* file3 = fopen("temp.txt", "w+");
     fputc('A', file3);
     fputc('\n', file3);
     fputc('B', file3);
     fprintf(file, "\n%d\n", 10);
     fputs("Hello World!", file3);
-    fclose(file3);    
+    fclose(file3);
 
     return 0;
 }

@@ -3,9 +3,8 @@
 #define TEST_MODE 1
 
 #ifndef TEST_MODE
-    #error "TEST_MODE is not defined"
+#error "TEST_MODE is not defined"
 #endif
-
 
 #define ADD(a, b) ((a) + (b))
 #define SUB(a, b) ((a) - (b))
@@ -14,15 +13,16 @@
 #define MOD(a, b) ((a) % (b))
 #define POW(a, b) ((a) ^ (b))
 
-#define X(...) #__VA_ARGS__ 
+#define X(...) #__VA_ARGS__
 #define STR(x) #x
 
-#define PRINT_NUMS_TO_PRODUCT(a, b) do { \
-    int product = (a) * (b); \
-    for (int i = 0; i < product; i++) { \
-        printf("%d\n", i); \
-    } \
-} while (0)
+#define PRINT_NUMS_TO_PRODUCT(a, b)         \
+    do {                                    \
+        int product = (a) * (b);            \
+        for (int i = 0; i < product; i++) { \
+            printf("%d\n", i);              \
+        }                                   \
+    } while (0)
 
 #define PI 3.14159265358979323846
 

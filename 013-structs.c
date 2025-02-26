@@ -7,8 +7,8 @@ struct employee {
 };
 
 
-void display_employee(struct employee *employee) {
-    printf("=== Employee ===\nName: %s\nAge: %d\nSalary: %.2f\n", employee->name, employee->age, employee->salary);
+void display_employee(struct employee *em) {
+    printf("=== Employee ===\nName: %s\nAge: %d\nSalary: %.2f\n", em->name, em->age, em->salary);
 }
 
 int main(void) {
@@ -29,7 +29,7 @@ int main(void) {
 
     printf("====================================\n");
 
-    struct employee employee3 = {.name = "Jane Doe", .age = 25, .salary = 2000.00};
+    struct employee employee3 = {.age = 25, .name = "Jane Doe", .salary = 2000.00};
     display_employee(&employee3);
 
     return 0;

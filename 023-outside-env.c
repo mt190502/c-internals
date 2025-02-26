@@ -1,10 +1,10 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <stdio.h>
 
-int main(int argc, char *argv[]) {
+int main(int argc, char* argv[]) {
     strcpy(argv[0], "023-outside-env-but-argv0-is-modified");
-    
+
     if (argv[1] == NULL) {
         printf("argument is not provided\n");
         return EXIT_FAILURE;

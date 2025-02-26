@@ -9,6 +9,6 @@ int main(void) {
 
     size_t size = sizeof(num);
     printf("%zu\n", size);
-    
+
     return 0;
 }

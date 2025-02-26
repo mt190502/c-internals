@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 
-
 int strlen_cst(const char* str) {
     int i = 0;
     while (str[i] != '\0') {
@@ -9,7 +8,6 @@ int strlen_cst(const char* str) {
     }
     return i;
 }
-
 
 int main(void) {
     char* str = "Hello, World! 1";
@@ -46,6 +44,6 @@ int main(void) {
     copy2[7] = '\0';
     printf("(%2d) %s\n", strlen_cst(str6), str6);
     printf("(%2d) %s\n", strlen_cst(copy2), copy2);
-    
+
     return 0;
 }

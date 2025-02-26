@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int main(void) {
-    int *ptr = (int*)malloc(sizeof(int));
+    int* ptr = (int*)malloc(sizeof(int));
     if (ptr == NULL) {
         return 1;
     }
@@ -14,7 +14,7 @@ int main(void) {
 
     printf("====================================\n");
 
-    int *ptr2 = (int*)calloc(10, sizeof(int));
+    int* ptr2 = (int*)calloc(10, sizeof(int));
     if (ptr2 == NULL) {
         return 1;
     }

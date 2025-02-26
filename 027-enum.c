@@ -1,39 +1,14 @@
 #include <stdio.h>
 
+enum numbers { A = 1, B, C };
 
-enum numbers { 
-    A = 1,
-    B,
-    C
-};
+enum { D = 3, E, F = 10, G, H = 4, I };
 
-enum {
-    D = 3,
-    E,
-    F = 10,
-    G,
-    H = 4,
-    I
-};
+enum { J = 3, K = 3, L = 3 };
 
-enum {
-    J = 3,
-    K = 3,
-    L = 3
-};
+enum { X, Y, Z };
 
-enum {
-    X,
-    Y,
-    Z
-};
-
-typedef enum {
-    ZERO,
-    ONE,
-    TWO,
-    THREE
-} numbers2;
+typedef enum { ZERO, ONE, TWO, THREE } numbers2;
 
 int main(void) {
     printf("A: %d - B: %d - C: %d\n", A, B, C);

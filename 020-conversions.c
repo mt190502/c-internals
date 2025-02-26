@@ -1,5 +1,5 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(void) {
     char s[10] = "1234";
@@ -37,7 +37,7 @@ int main(void) {
 
     int s3 = 1234;
     void* ptr = &s3;
-    int *ptr2 = (int*)ptr;
+    int* ptr2 = (int*)ptr;
     printf("ptr2: %d\n", *ptr2);
 
     printf("====================================\n");
@@ -45,5 +45,5 @@ int main(void) {
     const int s4 = 1234;
     long int s4_long = (long int)s4 + 10;
 
-    return 0;   
+    return 0;
 }

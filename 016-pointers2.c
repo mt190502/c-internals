@@ -12,7 +12,7 @@ int strlen_cst(char* str) {
 
 int main(void) {
     int arr[5] = {1, 2, 3, 4, 5};
-    int *ptr = &arr[0];
+    int* ptr = &arr[0];
 
     printf("arr: %p -> %d\n", (void*)arr, *arr);
     printf("ptr: %p -> %d\n", (void*)ptr, *ptr);
@@ -37,7 +37,6 @@ int main(void) {
     memccpy(t, str, '\0', strlen(str) + 1);
 
     printf("str (%2d): %s\n", strlen_cst(t), t);
-
 
     return 0;
 }

@@ -8,7 +8,7 @@ int main(void) {
         }
     }
 
-    end:
+end:
     printf("i is %d\n", 5);
     return 0;
 }

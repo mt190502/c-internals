@@ -16,7 +16,7 @@ int main(void) {
 
     printf("MAIN: Launching %d threads...\n", THREAD_COUNT);
     for (int i = 0; i < THREAD_COUNT; i++) {
-       int* arg = malloc(sizeof *arg);
+        int* arg = malloc(sizeof *arg);
         *arg = i;
         thrd_create(thread + i, run, arg);
     }
